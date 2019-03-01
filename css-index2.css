@@ -1,0 +1,513 @@
+body{
+
+	font-family: sans-serif;
+	scroll-snap-type: mandatory;
+	scroll-snap-points-y: repeat(100vh);
+	scroll-snap-type: y mandatory;
+	margin: 0px;
+
+}
+
+.wrapper{
+	display: grid;
+	grid-template-columns: min-content 1fr;
+}
+
+.header{
+	grid-column: 1/3;
+	position: relative;
+  	background-color: black;
+  	height: 100vh;
+  	min-height: 25rem;
+  	width: 100%;
+  	overflow: hidden;
+  	justify-content: center;
+  	/*
+  	display: flex;
+  	align-items: center;*/
+}
+
+.align-items-center{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header .overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, .5) url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAF0lEQVQIW2NkYGD4z8DAwMgAI0AMDA4AI3EBBCKrOnQAAAAASUVORK5CYII=');
+  opacity: .4;
+  z-index: 1;
+}
+
+.header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  
+}
+
+
+
+
+.card-infor{
+  position: relative;
+  z-index: 2; 
+  color: white;
+  /*position: absolute;*/
+  width: 100%;
+  padding: 0px;
+/*-webkit-backdrop-filter: blur(5px);
+backdrop-filter: blur(5px);
+background: rgba(34,34,34,0.23);
+display: inline-block;
+lam mo card info
+*/
+
+}
+
+/*.card-infor img{
+  max-width: 200px;
+  border-radius: 50%;
+  border: 10px rgba(34,34,34);
+  opacity: .85;
+}*/
+
+.text-card{
+  padding-left: 30px;
+  padding-top: 10px;
+  font-family: "Futura PT W02 Book",Futura,"Trebuchet MS",Arial,sans-serif;
+  font-weight: lighter;
+  font-size: 2em;
+
+}
+
+.text-card-name{
+  padding-top: 20px;
+  font-size: 60px;
+  font-weight: bolder;
+}
+
+.text-card-btn{
+  font-family: "Futura PT W02 Book",Futura,"Trebuchet MS",Arial,sans-serif;
+  font-size: 15px;
+  border-radius: 20px;
+  border-color: #4AC2BE;
+  border-width: 1px;
+  background-color: rgba(0,0,0,0.0);
+  color: white;
+  padding: 12px;
+  text-decoration: none;
+  font-weight: lighter;
+  margin: 5px;
+}
+
+.text-card-btn:hover{
+  color: #4AC2BE;
+}
+
+
+
+.sidebar{
+
+	width: 20vw;
+	height: 100vh;
+	background-color: white;
+	
+  	position: -webkit-sticky;  /*for Safari*/
+  	position: sticky;
+  	top: 0;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	--padding-top: 2vh;
+
+	box-shadow: 0.6px 0px 15px black;
+}
+
+.sidebar .my-img{
+  padding: 20px;
+}
+.sidebar .my-img img{
+  	max-width: 150px;
+  	border-radius: 50%;
+  	border: 10px rgba(34,34,34);
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  width: 100%;
+}
+
+.sidebar li a{
+	font-size: 1.5rem;
+	list-style-type: none;
+	--margin: 20px;
+	display: block;
+	padding: 1rem;
+	text-align: center;
+
+}
+.sidebar a{
+	color: #767676;
+	text-decoration: none;
+	font-family: "Futura PT W02 Light",Futura,"Trebuchet MS",Arial,sans-serif;
+}
+
+.sidebar li.sidebar-about a{
+	color: white;
+	background-color: #3EAFAB;
+	font-weight: bold;
+}
+
+.sidebar li.sidebar-edu a{
+	background-color: #FFF;
+	border-right: 10px solid #FECC33;
+}
+
+.sidebar li.sidebar-skills a{
+	background-color: #FFF;
+	border-right: 10px solid #178CC6;
+}
+.sidebar li.sidebar-interests a{
+	background-color: #FFF;
+	border-right: 10px solid #F25757;
+}
+.sidebar li.sidebar-contact a{
+	background-color: #FFF;
+	border-right: 10px solid #F2E863;
+}
+
+
+.main{
+
+	/*overflow-y: scroll;
+	--border: 1px solid gray;
+	scroll-snap-type: y mandatory;
+	&.proximity {
+			scroll-snap-type: y proximity;
+	}*/
+
+}
+
+section{
+	height: 100vh;
+	scroll-snap-align: start;
+}
+
+.section-title{
+	font-family: "Futura PT W02 Light",Futura,"Trebuchet MS",Arial,sans-serif;
+	--padding: 3em 0px 0px 10em;
+	--background: red;
+	height: 4em;
+	width: auto;
+	font-weight: bolder;
+	font-size: 1.5em;
+	display: flex;
+	align-items: center;
+	padding-left: 40px;
+	font-style: italic;
+}
+
+
+.about{
+	background-color: #3EAFAB;	
+	display: flex;
+	padding: 2em;
+	flex-direction: row;
+
+}
+
+ 	
+.about .my-image{
+	display: flex;
+	flex-grow: 1;
+	justify-content: center;
+	align-items: center;
+}
+
+.about .my-image img{
+	--height: 52vh;
+	--width: 26vw;
+	width: 80%;
+	height: auto;
+	box-shadow: 20px 18px 0 0 rgba(255,247,247,0.3);
+	border-radius: 20px;
+	--box-shadow: 0px 7px 40px rgba(234, 233, 233, 0.1);
+}
+
+
+.about .my-info{
+	--margin-left: 3em;
+	display: flex;
+	flex-grow: 3;
+	--align-items: center;
+	font-family: "Futura PT W02 Light",Futura,"Trebuchet MS",Arial,sans-serif;
+	flex-direction: column;
+	justify-content: center;
+	
+	line-height: 2.5em;
+}
+
+.about .my-info-text{
+
+}
+
+
+.about .my-info .text-bold{
+	font-size: 2rem;
+	color: #DDD;
+	font-weight: bold;
+	text-shadow: 0 5px 10px rgba(0,0,0,0.40);
+
+}
+
+.about .my-info .text-normal{
+	text-shadow: 0 2px 4px rgba(0,0,0,0.20);
+	font-size: 1.5rem;
+	color: #DDD;
+	font-weight: lighter;
+}
+
+.about .my-info .icon{
+	--background-color: red;
+	display: flex;
+	justify-content: center;
+}
+
+.about .my-info .icon img{
+	margin: 10px;
+	padding-top: 2em;
+	height: 3em;
+}
+
+.about .my-info .more-info-flex{
+
+	font-size: 1rem;
+	margin-top: 10px;
+	--background-color: #4AC2BE;
+	box-shadow: 0 0 20px 0 #3EAFAB;
+	border-radius: 8px;
+	width: auto;
+	display: flex;
+	--justify-content: center;
+	background-image: linear-gradient(-90deg, rgba(129,227,224,0.0) 25%, #4AC2BE 100%);
+	--font-style: italic;
+	--background-image: url(./img/bg.jpg);
+}
+
+
+
+.about .my-info .more-info-flex ul{
+	list-style-type: none;
+	display: inline-block;
+}
+
+.about .my-info .more-info-flex span{
+	font-weight: bold;
+	padding-right: 5px; 
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.education{
+	background-color: #FECC33;
+	height: 100vh;
+	background-image: url(./img/coding.png);
+	background-position: cover;
+	background-repeat: no-repeat;
+	background-position: 95% 50%;
+	background-size: 35%;
+}
+
+
+
+.section-title-education{
+	color: #FF773D;
+}
+
+.education .timeline-area{
+	height: 100%;
+    width: 70%;
+    font-family: "Futura PT W02 Light",Futura,"Trebuchet MS",Arial,sans-serif;
+    display: flex;
+    align-items: center;
+
+}
+
+.container {
+   width: 80%;
+   padding: 50px 0;
+   position: relative;
+   overflow: hidden;
+   margin-left: 15px;
+}
+
+.container:before {
+   content: '';
+   position: absolute;
+   top: 10px;
+   left: 50%;
+   margin-left: -2px;
+   width: 5px;
+   height: 100%;
+   background: #FDFFFC;
+   z-index: 1;
+}
+
+.timeline-block {
+   width: -webkit-calc(50% + 8px);
+   width: -moz-calc(50% + 8px);
+   width: calc(50% + 8px);
+   display: -webkit-box;
+   display: -webkit-flex;
+   display: -moz-box;
+   display: flex;
+   -webkit-box-pack: justify;
+   -webkit-justify-content: space-between;
+   -moz-box-pack: justify;
+   justify-content: space-between;
+   clear: both;
+}
+
+.timeline-block-right {
+   float: right;
+}
+
+.timeline-block-left {
+   float: left;
+   direction: rtl;
+}
+
+.marker {
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   border: 2px solid #F5F7FA;
+   background: #FF773D;
+   margin-top: 10px;
+   z-index: 2;
+}
+
+.timeline-content {
+   width: 95%;
+   --padding: 0 15px;
+   padding: 15px;
+   background: white;
+   margin: 5px;
+   border-radius: 10px;
+   box-shadow: 0 1px 11px 0 rgba(0,0,0,0.30);
+
+}
+
+.timeline-content h3 {
+   margin-top: 5px;
+   margin-bottom: 5px;
+   font-size: 35px;
+   font-weight: bolder;
+   --text-shadow: 1px 1px 8px rgba(0,0,0,0.40);
+   color: #FF773D;
+
+}
+
+.timeline-content span {
+   font-size: 20px;
+   color: #235789;
+}
+
+.timeline-content p {
+   font-size: 14px;
+   line-height: 1.5em;
+   word-spacing: 1px;
+   color: #235789;
+}
+
+
+@media screen and (max-width: 768px) {
+   .container:before {
+      left: 8px;
+      width: 2px;
+   }
+   .timeline-block {
+      width: 100%;
+      margin-bottom: 30px;
+   }
+   .timeline-block-right {
+      float: none;
+   }
+
+   .timeline-block-left {
+      float: none;
+      direction: ltr;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .skills{
+	background-color: #178CC6;
+	height: 100vh;
+}
+
+ .interests{
+	background-color: #F25757;
+	height: 100vh;
+}
+
+ .contact{
+	background-color: #F2E863;
+	height: 100vh;
+}
+

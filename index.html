@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel=stylesheet href="css-index2.css">
+<script src="https://bundle.run/css-scroll-snap-polyfill@0.1.2"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+
+</head>
+<body>
+  
+  <div class="wrapper"> <!-- FULL PAGE LAYOUT -->
+    <!-- HEADER -->
+    <section class="header">
+      <div class="header">
+        <div class="overlay"></div>
+        <video autoplay muted loop><source src="./video.mp4" type="video/mp4">Your browser does not support HTML5 video.</video>
+
+          <div class="card-infor align-items-center">
+            <table>
+              <tr>
+                <td rowspan="4">
+                <!-- <img src="img/myphoto.jpg" alt="myphoto"> -->
+                </td>
+                <td class="text-card">Hello World! I'm</td>
+              </tr>
+              <tr>
+                <td class="text-card text-card-name">THANH QUY <span style="color: #4AC2BE">VO</span></td>
+              </tr>
+              <tr>
+                <td class="text-card"> Student Information Technology </td>
+                
+              </tr>
+               <tr>
+                <td class="text-card"><button class="text-card-btn">MORE INFORMATION</button><button class="text-card-btn">DOWNLOAD MY CV</button> </td>
+                </tr>
+            </table>
+          </div>
+      </div>
+    </section>
+
+
+  <!--   END HEADER -->
+
+  <!-- SIDE BAR -->
+    <div class="sidebar">
+
+      <div class="my-img"><img src="./img/myphoto.jpg" alt="My Photo"></div>
+      <div><img src="./img/quy.svg" alt="My Photo" height="30px" width="160px" style="padding-bottom: 20px;"></div>
+      <ul>
+        <li class="sidebar-about"><a href="#about">ABOUT</a></li>
+        <li class="sidebar-edu"> <a href="#education">EDUCATION</a></li>
+        <li class="sidebar-skills"><a href="#skills">SKILLS</a></li>
+        <li class="sidebar-interests"><a href="#interests">INTERSTS</a></li>
+        <li class="sidebar-contact"><a href="contact">CONTACT</a></li>
+     </ul>
+
+    </div>
+
+    <!-- END SIDEBAR -->
+    
+    <div class="main"> 
+
+      <section class="about">
+        
+        <div class="my-image">
+          <div class=""><img src="./img/myphoto2.jpg" alt="My Photo"></div>
+        </div>
+
+        <div class="my-info">
+          <div class="my-info-text">
+              <div class="text-bold">Hi there!</div>
+            <div class="text-normal">I’m Thanh Quy Vo, I am studying information technology in the university of An Giang, Vietnam.</div>
+
+            <div class="text-normal">I am trying hard to become web fullstack developer (Frontend and Backend). Also I am good at html, css, javascript, nodeJS...</div>
+          </div>
+          
+
+          <div class="more-info-flex">  
+                <ul>
+                   <li><i class="fas fa-birthday-cake"></i><span> Birth:</span>Oct 19, 1998</li>
+                   <li><i class="fas fa-phone"></i><span> Phone Number:</span>+84 34 306 2244</li>
+                   <li><i class="fas fa-envelope"></i><span> Mail: </span>vtquy98@gmail.com</li>
+               </ul>   
+          </div>
+
+          <div class="icon ">
+            <a href="https://github.com/quythuong1998" target="_blank"><img src="./img/git.svg" alt="My Photo"></a>
+            <a href="https://fb.com/quythuong1998" target="_blank"><img src="./img/fb.svg" alt="My Photo"></a>
+            <a href="https://instagram.com/quythuong98" target="_blank"><img src="./img/ins.svg" alt="My Photo"></a>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+      <section class="education">
+        <!-- <div class="section-title section-title-education"><i class="fas fa-graduation-cap"></i>MY EDUCATION</div> -->
+        <div class="timeline-area">
+          <div class="container">
+           <div class="timeline-block timeline-block-right">
+              <div class="marker"></div>
+              <div class="timeline-content">
+                 <h3>2020</h3>
+                 <span>Student</span>
+                 <p>Graduated from An Giang university with good certificate.</p>
+                 <p>GPA: 3.2 <a href="#" style="text-decoration: none;
+                 color: #235789">(view detail)</a></p>
+              </div>
+           </div>
+
+           <div class="timeline-block timeline-block-left">
+              <div class="marker"></div>
+              <div class="timeline-content">
+                 <h3>2016</h3>
+                 <span>Student</span>
+                 <p>Start studying at An Giang University</p>
+              </div>
+           </div>
+
+           
+          </div>
+        </div>
+       
+
+
+      </section>
+
+      <section class="skills">
+        
+      </section>
+
+      <section class="interests">
+        
+      </section>
+
+      <section class="contact">
+        
+      </section>
+      
+      </div>
+
+  </div>
+
+  
+  <script type="text/javascript">
+    
+
+       const gra = function(min, max) {
+      return Math.random() * (max - min) + min;
+  }
+  const init = function(){
+    let items = document.querySelectorAll('section');
+     for (let i = 0; i < items.length; i++){
+       items[i].style.background = ;
+     }
+    cssScrollSnapPolyfill()
+  }
+  init();
+
+
+</script>
+
+</body>
+</html>
